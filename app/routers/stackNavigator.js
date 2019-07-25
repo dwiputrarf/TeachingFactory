@@ -5,6 +5,24 @@ import UploadPhoto from '../screens/UploadPhoto';
 import History from '../screens/History';
 import Account from '../screens/Account';
 import OnBoarding from '../screens/OnBoarding';
+import SplashScreen from '../screens/SplashScreen';
+
+export const SplashScreenStack = StackNavigator(
+  {
+    SplashScreen: {
+      screen: SplashScreen,
+      navigationOptions: {
+        tabBarVisible: false
+      }
+    }
+  },
+  {
+    headerMode: 'none',
+    navigationOptions: {
+      tabBarVisible: false
+    }
+  }
+);
 
 export const HomeStack = StackNavigator(
   {

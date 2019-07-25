@@ -1,13 +1,14 @@
 import { SwitchNavigator } from 'react-navigation';
-import { OnBoardingStack } from './stackNavigator';
+import { OnBoardingStack, SplashScreenStack } from './stackNavigator';
 import { Drawer } from './drawerNavigator';
 
 export default SwitchNavigator(
   {
+    SplashScreen: SplashScreenStack,
     OnBoarding: OnBoardingStack,
     App: Drawer
   },
   {
-    initialRouteName: 'OnBoarding'
+    initialRouteName: 'SplashScreen'
   }
 );
