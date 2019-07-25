@@ -9,7 +9,7 @@
 
 # Your First Screen (SplashScreen)
 1. Buka project milikmu.
-2. Buat Sebuah Folder pada *./app/screen/* simpan folder tersebut dengan nama **SplashScreen**.
+2. Buat Sebuah Folder pada *./app/screens/* simpan folder tersebut dengan nama **SplashScreen**.
 3. Buat 3 buah file *.js* : **component.js, index.js, dan styles.js**.
 
 **component.js**
@@ -52,4 +52,44 @@ const styles = StyleSheet.create({
 
 export default styles;
 
+```
+4. Tambahkan route **SplashScreen** yang kita buat pada *./app/routers/stackNavigator.js*. import screen yang sudah kita buat sebelumnya.
+```javascript
+import SplashScreen from '../screens/SplashScreen';
+```
+5. Tambahkan Sebuah `Stack` untuk screen yang kita buat. `Stack` pada navigator digunakan untuk menandakan sebuah journey yang berbeda pada navigasi dalam aplikasi kita.
+```javascript
+export const SplashScreenStack = StackNavigator(
+  {
+    SplashScreen: {
+      screen: SplashScreen,
+      navigationOptions: {
+        tabBarVisible: false
+      }
+    }
+  },
+  {
+    headerMode: 'none',
+    navigationOptions: {
+      tabBarVisible: false
+    }
+  }
+);
+```
+6. Tambahkan `Stack` yang sudah kita buat ke dalam *./app/routers/index.js* sehingga dapat dikenali oleh aplikasi. import `stack` yang sudah kita buat sebelumnya.
+```javascript
+import { OnBoardingStack, SplashScreenStack } from './stackNavigator';
+```
+7. Tambahkan `route stack` yang kita buat ke dalam `SwitchNavigator` dengan nama **SplashScreen** dan ganti `initialRouteName` ke **SplashScreen** sehingga pertama kali aplikasi terbuka akan menampilkan screen **SplashScreen**
+```javascript
+export default SwitchNavigator(
+  {
+    SplashScreen: SplashScreenStack,
+    OnBoarding: OnBoardingStack,
+    App: Drawer
+  },
+  {
+    initialRouteName: 'SplashScreen'
+  }
+);
 ```
