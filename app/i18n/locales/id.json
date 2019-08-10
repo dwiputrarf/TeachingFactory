@@ -1,4 +1,6 @@
 {
+  "appName": "GO GREEN",
+  "appVersion": "v.1.1",
   "camera": "Kamera",
   "cancel": "Kembali",
   "checkConnection": "Tidak ada koneksi. \nCek Koneksi internet anda.",

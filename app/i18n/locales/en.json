@@ -1,4 +1,6 @@
 {
+  "appName": "GO GREEN",
+  "appVersion": "v.1.1",
   "camera": "Camera",
   "cancel": "Cancel",
   "checkConnection": "No internet connection found. \nCheck your connection.",
