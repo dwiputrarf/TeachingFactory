@@ -1,11 +1,11 @@
 import React from 'react';
-import { View, Text, Image, Alert } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import PropTypes from 'prop-types';
 import MainScreen from '../../components/layouts/MainScreen';
 import Header from '../../components/elements/Header';
 import styles from './styles';
 import { ENDPOINT } from '../../configs';
-import { measureNetworkBandwitdh } from '../../utils/checkBandwidth';
+// import { measureNetworkBandwitdh } from '../../utils/checkBandwidth';
 import errors from '../../utils/errors';
 import I18n from '../../i18n';
 
@@ -20,20 +20,20 @@ export default class Component extends React.Component {
   async componentDidMount() {
     const { actions } = this.props;
     await actions.fetchGetListUser('1');
-    measureNetworkBandwitdh((success, data, error) => {
-      if (success) {
-        Alert.alert(data);
-      } else if (error) {
-        Alert.alert(data);
-      }
-    });
+    // measureNetworkBandwitdh((success, data, error) => {
+    //   if (success) {
+    //     Alert.alert(data);
+    //   } else if (error) {
+    //     Alert.alert(data);
+    //   }
+    // });
   }
 
   _loadData = async () => {
     try {
       await this.setState({ isLoading: true });
+      // eslint-disable-next-line no-unused-vars
       const result = await ENDPOINT.getListUser('1');
-      console.log({ result });
     } catch (error) {
       errors.createError(I18n.t('error.timeOutConnection'));
     } finally {
