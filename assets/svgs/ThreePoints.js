@@ -1,5 +1,5 @@
-import React from "react";
-import Svg, { Circle } from "react-native-svg";
+import React from 'react';
+import Svg, { Circle } from 'react-native-svg';
 
 const SvgThreePoints = props => (
   <Svg viewBox="0 0 512 512" {...props}>

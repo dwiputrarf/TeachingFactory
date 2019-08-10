@@ -1,5 +1,5 @@
-import React from "react";
-import Svg, { G, Circle, Path } from "react-native-svg";
+import React from 'react';
+import Svg, { G, Circle, Path } from 'react-native-svg';
 import { COLOR_WHITE } from '../../app/styles';
 /* SVGR has dropped some elements not supported by react-native-svg: style */
 

@@ -1,5 +1,5 @@
-import React from "react";
-import Svg, { G, Circle, Path } from "react-native-svg";
+import React from 'react';
+import Svg, { G, Circle, Path } from 'react-native-svg';
 import { COLOR_WHITE } from '../../app/styles';
 /* SVGR has dropped some elements not supported by react-native-svg: style */
 
@@ -7,7 +7,7 @@ const SvgInstastory = props => (
   <Svg height={48} width={48} viewBox="0 0 48 48" {...props}>
     <G fill="none" fillRule="evenodd">
       <Circle
-        fill={"none"}
+        fill="none"
         stroke={COLOR_WHITE}
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -18,7 +18,7 @@ const SvgInstastory = props => (
         r={15.344}
       />
       <Path
-        fill={"none"}
+        fill="none"
         stroke={COLOR_WHITE}
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -27,7 +27,7 @@ const SvgInstastory = props => (
         d="M21.66 11.48a12.866 12.866 0 0 1 1.614-.185m-8.038 3.373c1.441-1.241 3.226-2.355 5.105-2.886"
       />
       <Circle
-        fill={"none"}
+        fill="none"
         stroke={COLOR_WHITE}
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -39,7 +39,7 @@ const SvgInstastory = props => (
       />
       <Circle cx={28.248} cy={19.891} r={0.462} fill={COLOR_WHITE} />
       <Path
-        fill={"none"}
+        fill="none"
         stroke={COLOR_WHITE}
         strokeLinecap="round"
         strokeLinejoin="round"

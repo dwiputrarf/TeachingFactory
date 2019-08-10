@@ -1,16 +1,11 @@
-import React from "react";
-import Svg, { G, Circle, Path } from "react-native-svg";
+import React from 'react';
+import Svg, { G, Circle, Path } from 'react-native-svg';
 /* SVGR has dropped some elements not supported by react-native-svg: style */
 
 const SvgTag = props => (
   <Svg viewBox="0 0 48 48" {...props}>
     <G id="tag_svg__tag_svg__Icons">
-      <Circle
-        className="tag_svg__tag_svg__st1"
-        cx={23.998}
-        cy={22.744}
-        r={3.336}
-      />
+      <Circle className="tag_svg__tag_svg__st1" cx={23.998} cy={22.744} r={3.336} />
       <Path
         className="tag_svg__tag_svg__st1"
         d="M18.275 30.535a3.258 3.258 0 0 1 3.249-3.248h4.948a3.258 3.258 0 0 1 3.248 3.248M12.896 18.039v7.851m0 1.719v.749"
