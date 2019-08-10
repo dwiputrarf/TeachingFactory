@@ -97,3 +97,40 @@ export default SwitchNavigator(
 
 ![Sample SplashScreen](https://i.ibb.co/kBgnc6v/Splash-Screen.jpg)
 # Custom UI Splashscreen
+https://whatdidilearn.info/2019/01/13/how-to-implement-a-splash-screen-in-react-native.html
+
+1. Siapkan Assets logo aplikasi (app_logo.png) untuk ditampilkan pada Splash Screen dan tempatkan di folder *./assets/images/* (buat folder jika belum ada).
+2. Image yang sudah ada perlu diberikan indexing sebagai pengenal. Buka file *./app/configs/images.js*, kemudian tambahkan kode berikut sebagai indexing logo aplikasi dalam *const images*.
+```
+appLogo: require('../../assets/images/app_logo.png')
+```
+3. Buka *./app/screen/SplashScreen/component.js* untuk mengubah tampilan UI, sesuaikan dengan code di bawah ini.
+```
+import React from 'react';
+import { Text, View, Image } from 'react-native';
+import styles from './styles';
+import { scale } from '../../utils/scaling';
+import METRICS from '../../constants/metrics';
+import IMAGES from '../../configs/images';
+import { COLOR_BLACK } from '../../styles';
+
+export default class Component extends React.Component {
+  render() {
+    return (
+      <View style={styles.mainContainer}>
+        <View style={{ width: scale(100), height: scale(100) }}>
+          <Image
+            source={IMAGES.appLogo}
+            resizeMode="contain"
+            style={{ flex: 1, width: undefined, height: undefined, marginBottom: METRICS.baseMargin }}
+          />
+        </View>
+        <Text style={{ fontSize: 18, color: COLOR_BLACK }}>GO GREEN</Text>
+        <Text style={{ fontSize: 14 }}>v.1.1</Text>
+      </View>
+    );
+  }
+}
+```
+4. Pisahkan styling ke file *./app/screen/SplashScreen/style.js* dan kemudian gunakan dalam component. Dan String ke *./app/I18n/locales/en.json* dan *./app/I18n/locales/en.json*
+
