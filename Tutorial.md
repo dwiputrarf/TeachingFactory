@@ -101,11 +101,11 @@ https://whatdidilearn.info/2019/01/13/how-to-implement-a-splash-screen-in-react-
 
 1. Siapkan Assets logo aplikasi (app_logo.png) untuk ditampilkan pada Splash Screen dan tempatkan di folder *./assets/images/* (buat folder jika belum ada).
 2. Image yang sudah ada perlu diberikan indexing sebagai pengenal. Buka file *./app/configs/images.js*, kemudian tambahkan kode berikut sebagai indexing logo aplikasi dalam *const images*.
-```
+```javascript
 appLogo: require('../../assets/images/app_logo.png')
 ```
 3. Buka *./app/screen/SplashScreen/component.js* untuk mengubah tampilan UI, sesuaikan dengan code di bawah ini.
-```
+```javascript
 import React from 'react';
 import { Text, View, Image } from 'react-native';
 import styles from './styles';
@@ -132,5 +132,54 @@ export default class Component extends React.Component {
   }
 }
 ```
-4. Pisahkan styling ke file *./app/screen/SplashScreen/style.js* dan kemudian gunakan dalam component. Dan String ke *./app/I18n/locales/en.json* dan *./app/I18n/locales/en.json*
+4. Pisahkan styling ke file *./app/screen/SplashScreen/style.js* dan kemudian gunakan dalam component. Dan String ke *./app/I18n/locales/en.json* dan *./app/I18n/locales/id.json*
+*** ./SplashScreen/component.js ***
+```javascript
+import React from 'react';
+import { Text, View, Image } from 'react-native';
 
+import styles from './styles';
+import IMAGES from '../../configs/images';
+import I18n from '../../i18n';
+
+export default class Component extends React.Component {
+  render() {
+    return (
+      <View style={styles.mainContainer}>
+        <View style={styles.logoContainer}>
+          <Image source={IMAGES.appLogo} resizeMode="contain" style={styles.logo} />
+        </View>
+        <Text style={styles.appTitle}>{I18n.t('appName')}</Text>
+        <Text style={styles.appVersion}>{I18n.t('appVersion')}</Text>
+      </View>
+    );
+  }
+}
+```
+*** ./SplashScreen/styles.js ***
+```javascript
+import { StyleSheet } from 'react-native';
+import { COLOR_WHITE, COLOR_BLACK } from '../../styles';
+import { scale } from '../../utils/scaling';
+import METRICS from '../../constants/metrics';
+
+const styles = StyleSheet.create({
+  mainContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: COLOR_WHITE
+  },
+  logoContainer: { width: scale(100), height: scale(100) },
+  logo: { flex: 1, width: undefined, height: undefined, marginBottom: METRICS.baseMargin },
+  appTitle: { fontSize: 18, color: COLOR_BLACK },
+  appVersion: { fontSize: 14 }
+});
+
+export default styles;
+```
+*** Tambahkan code berikut pada .app/I18n/locales/en.json dan .app/I18n/locales/id.json ***
+```javascript
+  "appName": "GO GREEN",
+  "appVersion": "v.1.1",
+```
