@@ -1,5 +1,6 @@
 import { Dimensions, Platform, PixelRatio } from 'react-native';
 import { COLOR_BASE_PRIMARY_MAIN } from '../styles';
+import { scale } from '../utils/scaling';
 
 const x = Dimensions.get('window').width;
 const y = Dimensions.get('window').height;
@@ -49,13 +50,13 @@ const metrics = {
   pixelRatio: Platform.OS === 'ios' ? (x > 375 && x < 703 ? 2 : PixelRatio.get()) : PixelRatio.get() * 0.6,
   screenShape,
   iosDevice,
-  marginHorizontal: 10,
-  marginVertical: 10,
-  section: 25,
-  baseMargin: 10,
-  doubleBaseMargin: 20,
-  smallMargin: 5,
-  doubleSection: 50,
+  marginHorizontal: scale(10),
+  marginVertical: scale(10),
+  section: scale(25),
+  baseMargin: scale(10),
+  doubleBaseMargin: scale(20),
+  smallMargin: scale(5),
+  doubleSection: scale(50),
   horizontalLineHeight: 1,
   searchBarHeight: 30,
   //   screenWidth: x < y ? x : y,
