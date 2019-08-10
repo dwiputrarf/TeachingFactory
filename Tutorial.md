@@ -94,5 +94,6 @@ export default SwitchNavigator(
 );
 ```
 8. Run aplikasi melalui terminal dengan `react-native run-android`
+
 ![Sample SplashScreen](https://i.ibb.co/kBgnc6v/Splash-Screen.jpg)
 # Custom UI Splashscreen
