@@ -99,12 +99,12 @@ export default SwitchNavigator(
 # Custom UI Splashscreen
 https://whatdidilearn.info/2019/01/13/how-to-implement-a-splash-screen-in-react-native.html
 
-1. Siapkan Assets logo aplikasi (app_logo.png) untuk ditampilkan pada Splash Screen dan tempatkan di folder *./assets/images/* (buat folder jika belum ada).
-2. Image yang sudah ada perlu diberikan indexing sebagai pengenal. Buka file *./app/configs/images.js*, kemudian tambahkan kode berikut sebagai indexing logo aplikasi dalam *const images*.
+1. Siapkan Assets logo aplikasi (app_logo.png) untuk ditampilkan pada **SplashScreen** dan tempatkan di folder *./assets/images/* (buat folder jika belum ada).
+2. Image yang sudah ada perlu diberikan **indexing** sebagai pengenal. Buka file *./app/configs/images.js*, kemudian tambahkan kode berikut sebagai **indexing** logo aplikasi dalam **const images**.
 ```javascript
 appLogo: require('../../assets/images/app_logo.png')
 ```
-3. Buka *./app/screen/SplashScreen/component.js* untuk mengubah tampilan UI, sesuaikan dengan code di bawah ini.
+3. Buka **./app/screen/SplashScreen/component.js** untuk mengubah tampilan UI, sesuaikan dengan code di bawah ini.
 ```javascript
 import React from 'react';
 import { Text, View, Image } from 'react-native';
@@ -132,8 +132,8 @@ export default class Component extends React.Component {
   }
 }
 ```
-4. Pisahkan styling ke file *./app/screen/SplashScreen/style.js* dan kemudian gunakan dalam component. Dan String ke *./app/I18n/locales/en.json* dan *./app/I18n/locales/id.json*
-*** ./SplashScreen/component.js ***
+4. Pisahkan **styling** ke file *./app/screen/SplashScreen/style.js* dan kemudian gunakan dalam **component**. Dan **String** ke *./app/I18n/locales/en.json* dan *./app/I18n/locales/id.json*
+** ./SplashScreen/component.js **
 ```javascript
 import React from 'react';
 import { Text, View, Image } from 'react-native';
@@ -156,7 +156,7 @@ export default class Component extends React.Component {
   }
 }
 ```
-*** ./SplashScreen/styles.js ***
+** ./SplashScreen/styles.js **
 ```javascript
 import { StyleSheet } from 'react-native';
 import { COLOR_WHITE, COLOR_BLACK } from '../../styles';
@@ -178,8 +178,37 @@ const styles = StyleSheet.create({
 
 export default styles;
 ```
-*** Tambahkan code berikut pada .app/I18n/locales/en.json dan .app/I18n/locales/id.json ***
+** Tambahkan code berikut pada *.app/I18n/locales/en.json* dan *.app/I18n/locales/id.json*
 ```javascript
   "appName": "GO GREEN",
   "appVersion": "v.1.1",
 ```
+![Sample SplashScreen](https://i.ibb.co/LPCmnvF/Capture.jpg)
+# Fungsi Timer pada SplashScreen
+1. Menghilangkan `StatusBar` pada **SplashScreen** dengan cara menambahkan `<StatusBar hidden /> ` pada *./SplashScreen/component.js*
+2. Menambahkan fungsi timer pada **component** di atas `render()`
+```javascript
+async componentDidMount() {
+    const data = await this.performTimeConsumingTask();
+
+    if (data !== null) {
+      // Timer Selesai (Lakukan Sesuatu)
+    }
+  }
+
+  performTimeConsumingTask = async () =>
+    new Promise(resolve =>
+      setTimeout(() => {
+        resolve('result');
+      }, 2000)
+    );
+```
+# Melakukan navigasi ke screen berbeda
+1. Import **PropTypes** untuk menggunakan navigasi `import PropTypes from 'prop-types';`
+2. Masukan code berikut pada akhir *./SplashScreen/component.js*
+```javascript
+Component.propTypes = {
+  navigation: PropTypes.object.isRequired
+};
+```
+3. Ganti `// Timer Selesai (Lakukan Sesuatu)` dengan `this.props.navigation.navigate('Home');` untuk melakukan navigasi ke route Home.
