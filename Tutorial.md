@@ -212,3 +212,4 @@ Component.propTypes = {
 };
 ```
 3. Ganti `// Timer Selesai (Lakukan Sesuatu)` dengan `this.props.navigation.navigate('Home');` untuk melakukan navigasi ke route Home.
+![Sample SplashScreen](https://media.giphy.com/media/dX2dOUKxXvYSLvD5lQ/giphy.gif)
