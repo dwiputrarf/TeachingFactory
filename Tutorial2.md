@@ -14,7 +14,7 @@ https://rationalappdev.com/complete-guide-to-mobile-app-onboarding-with-react-na
 /* eslint-disable prefer-destructuring */
 /* eslint-disable react/sort-comp */
 import React, { Component } from 'react';
-import { Platform, ScrollView, View, TouchableOpacity } from 'react-native';
+import { Platform, ScrollView, View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import METRICS from '../../../constants/metrics';
@@ -176,17 +176,13 @@ export default class Swiper extends Component {
     const { onPress } = this.props;
     const lastScreen = this.state.index === this.state.total - 1;
     return (
-      <TouchableOpacity
-        onPress={onPress}
-        pointerEvents="box-none"
-        style={[styles.buttonWrapper, styles.fullScreen]}
-      >
+      <View onPress={onPress} pointerEvents="box-none" style={[styles.buttonWrapper, styles.fullScreen]}>
         {lastScreen ? (
           <Button title="Start Now" onPress={onPress} />
         ) : (
           <Button title="Continue" onPress={() => this.swipe()} />
         )}
-      </TouchableOpacity>
+      </View>
     );
   };
 
@@ -335,3 +331,4 @@ const styles = StyleSheet.create({
 
 export default styles;
 ```
+![Sample OnBoarding](https://media.giphy.com/media/cMcIxkOn68RFL4pK9k/giphy.gif)
