@@ -133,6 +133,7 @@ export default class Component extends React.Component {
 }
 ```
 4. Pisahkan **styling** ke file *./app/screen/SplashScreen/style.js* dan kemudian gunakan dalam **component**. Dan **String** ke *./app/I18n/locales/en.json* dan *./app/I18n/locales/id.json*.
+
 **./SplashScreen/component.js**
 ```javascript
 import React from 'react';
