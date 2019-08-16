@@ -1,7 +1,23 @@
 import { StyleSheet } from 'react-native';
 import { COLOR_WHITE, COLOR_FONT_PRIMARY_DARK, COLOR_BASE_PRIMARY_MAIN } from '../../styles';
+import { scale } from '../../utils/scaling';
 
 const styles = StyleSheet.create({
+  mainContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: COLOR_WHITE
+  },
+  image: {
+    flex: 1,
+    width: undefined,
+    height: undefined
+  },
+  imageContainer: {
+    width: scale(200),
+    height: scale(200)
+  },
   slide: {
     flex: 1,
     justifyContent: 'center',

@@ -1,6 +1,9 @@
 /* eslint-disable global-require */
 const images = {
-  appLogo: require('../../assets/images/app_logo.png')
+  appLogo: require('../../assets/images/app_logo.png'),
+  onBoarding1: require('../../assets/images/on_boarding_1.jpg'),
+  onBoarding2: require('../../assets/images/on_boarding_2.jpg'),
+  onBoarding3: require('../../assets/images/on_boarding_3.jpg')
   // back: require('../../assets/images/back.png'),
   // checkBoxOn: require('../../assets/images/checkbox_on.png'),
   // checkBoxOff: require('../../assets/images/checkbox_off.png'),

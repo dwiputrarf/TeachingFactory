@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { COLOR_BASE_PRIMARY_MAIN } from '../../../styles';
+import { COLOR_BASE_PRIMARY_MAIN, COLOR_WHITE } from '../../../styles';
 
 const styles = StyleSheet.create({
   button: {
@@ -11,7 +11,8 @@ const styles = StyleSheet.create({
     flexGrow: 1
   },
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: COLOR_WHITE
   },
   contentContainerStyle: {
     flex: 1

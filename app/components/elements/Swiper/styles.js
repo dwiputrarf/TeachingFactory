@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 import METRICS from '../../../constants/metrics';
-import { COLOR_WHITE, COLOR_TRANSPARENT, COLOR_GREY } from '../../../styles';
+import { COLOR_TRANSPARENT, COLOR_GREY, COLOR_BASE_PRIMARY_MAIN } from '../../../styles';
 
 const styles = StyleSheet.create({
   fullScreen: {
@@ -38,7 +38,10 @@ const styles = StyleSheet.create({
   },
 
   activeDot: {
-    backgroundColor: COLOR_WHITE
+    width: 13,
+    height: 7,
+    borderRadius: 7,
+    backgroundColor: COLOR_BASE_PRIMARY_MAIN
   },
 
   buttonWrapper: {

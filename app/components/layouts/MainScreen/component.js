@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, ViewPropTypes } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from './styles';
 import StatusBar from '../../elements/StatusBar';
@@ -64,11 +64,11 @@ Component.propTypes = {
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.any]).isRequired,
   isLoading: PropTypes.bool,
   error: PropTypes.bool,
-  style: PropTypes.object
+  style: ViewPropTypes.style
 };
 
 Component.defaultProps = {
   isLoading: false,
   error: false,
-  style: {}
+  style: styles.mainContainer
 };

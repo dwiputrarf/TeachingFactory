@@ -10,6 +10,7 @@ import PropTypes from 'prop-types';
 import METRICS from '../../../constants/metrics';
 import styles from './styles';
 import Button from '../Button';
+import I18n from '../../../i18n';
 
 const width = METRICS.screenWidth;
 const height = METRICS.screenHeight;
@@ -147,11 +148,7 @@ export default class Swiper extends Component {
 
     for (let key = 0; key < this.state.total; key++) {
       dots.push(
-        key === this.state.index
-          ? // Active dot
-            React.cloneElement(ActiveDot, { key })
-          : // Other dots
-            React.cloneElement(Dot, { key })
+        key === this.state.index ? React.cloneElement(ActiveDot, { key }) : React.cloneElement(Dot, { key })
       );
     }
 
@@ -168,9 +165,9 @@ export default class Swiper extends Component {
     return (
       <View onPress={onPress} pointerEvents="box-none" style={[styles.buttonWrapper, styles.fullScreen]}>
         {lastScreen ? (
-          <Button title="Start Now" onPress={onPress} />
+          <Button title={I18n.t('getStarted')} onPress={onPress} />
         ) : (
-          <Button title="Continue" onPress={() => this.swipe()} />
+          <Button title={I18n.t('next')} onPress={() => this.swipe()} />
         )}
       </View>
     );

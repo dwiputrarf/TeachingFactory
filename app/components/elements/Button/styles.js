@@ -4,11 +4,15 @@ import {
   COLOR_BASE_PRIMARY_MAIN,
   COLOR_BASE_PRIMARY_LIGHT,
   COLOR_BASE_PRIMARY_DARK,
-  COLOR_FONT_PRIMARY_LIGHT
+  COLOR_FONT_PRIMARY_LIGHT,
+  COLOR_WHITE,
+  COLOR_BASE_TERTIARY_LIGHT,
+  COLOR_FONT_PRIMARY_DARK
 } from '../../../styles';
+import METRICS from '../../../constants/metrics';
 
 const container = {
-  width: 200,
+  width: METRICS.screenWidth - 4 * METRICS.doubleBaseMargin,
   height: 40,
   justifyContent: 'center',
   alignItems: 'center',
@@ -22,7 +26,7 @@ export default StyleSheet.create({
   },
   containerDisabled: {
     ...container,
-    backgroundColor: COLOR_BASE_PRIMARY_LIGHT
+    backgroundColor: COLOR_BASE_TERTIARY_LIGHT
   },
   containerFlat: {
     ...container,
@@ -30,13 +34,13 @@ export default StyleSheet.create({
   },
   containerPressed: {
     ...container,
-    backgroundColor: COLOR_BASE_PRIMARY_DARK
+    backgroundColor: COLOR_BASE_PRIMARY_LIGHT
   },
   text: {
-    color: COLOR_FONT_PRIMARY_LIGHT
+    color: COLOR_WHITE
   },
   textDisabled: {
-    color: COLOR_FONT_PRIMARY_LIGHT
+    color: COLOR_FONT_PRIMARY_DARK
   },
   textPressed: {
     color: COLOR_FONT_PRIMARY_LIGHT

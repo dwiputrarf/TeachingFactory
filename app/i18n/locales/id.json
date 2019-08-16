@@ -10,7 +10,9 @@
     "timeOutConnection": "Koneksi timeout. silahkan coba beberapa saat lagi."
   },
   "gallery": "Galeri",
+  "getStarted": "Get Started",
   "loading": "Loading ...",
+  "next": "Next",
   "onBoarding": {
     "title1": "Study",
     "desc1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
