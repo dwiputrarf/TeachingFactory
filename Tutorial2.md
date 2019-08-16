@@ -335,6 +335,13 @@ export default styles;
 
 # Customized/Revamp OnBoarding UI
 
+OnBoarding adalah screen yang memuat informasi dasar aplkiasi, digunakan untuk mengenalkan aplikasi kepada user baru pada umumnya. Revamp atau ubah styling dari onBoarding Screen yang sebelumnya dibuat menjadi seperti di bawah ini.
+
 ![Customized OnBoarding](https://media.giphy.com/media/VI8erJk8mLtdxRUxoz/giphy.gif)
 
-1. Custom Reusable Component Button
+1. Mengganti Background Screen
+2. Menghilangkan StatusBar
+3. Memasukkan Asset Gambar pada OnBoarding
+4. Mengganti Color Scheme
+5. Merevamp Dots Indicator pada Pagination
+6. Merevamp Reusable Component Button
