@@ -2,19 +2,19 @@
  * @providesModule config-styles
  */
 
-import { gray, teal, red, black, white } from './colors';
+import { gray, red, black, white } from './colors';
 
-export const COLOR_BASE_PRIMARY_DARK = teal.teal_70;
-export const COLOR_BASE_PRIMARY_MAIN = teal.teal_50;
-export const COLOR_BASE_PRIMARY_LIGHT = teal.teal_30;
+export const COLOR_BASE_PRIMARY_DARK = '#007d7e';
+export const COLOR_BASE_PRIMARY_MAIN = '#25adad';
+export const COLOR_BASE_PRIMARY_LIGHT = '#66dfdf';
 
-export const COLOR_BASE_SECONDARY_DARK = '#ba000d';
-export const COLOR_BASE_SECONDARY_MAIN = '#f44336';
-export const COLOR_BASE_SECONDARY_LIGHT = '#ff7961';
+export const COLOR_BASE_SECONDARY_DARK = '#003b50';
+export const COLOR_BASE_SECONDARY_MAIN = '#03657c';
+export const COLOR_BASE_SECONDARY_LIGHT = '#4893ab';
 
-export const COLOR_BASE_TERTIARY_DARK = '#666666';
-export const COLOR_BASE_TERTIARY_MAIN = '#bdbdbd';
-export const COLOR_BASE_TERTIARY_LIGHT = '#e4e7eb';
+export const COLOR_BASE_TERTIARY_DARK = '#616161';
+export const COLOR_BASE_TERTIARY_MAIN = '#929292';
+export const COLOR_BASE_TERTIARY_LIGHT = '#BDBDBD';
 
 export const COLOR_FONT_PRIMARY_DARK = '#8c8c8c';
 export const COLOR_FONT_PRIMARY_LIGHT = '#bdbdbd';

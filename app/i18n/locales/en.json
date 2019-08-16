@@ -11,6 +11,14 @@
   },
   "gallery": "Gallery",
   "loading": "Loading ...",
+  "onBoarding": {
+    "title1": "Study",
+    "desc1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "title2": "On Hand",
+    "desc2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "title3": "Achieve",
+    "desc3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
   "oops": "Oops!",
   "password": "Password",
   "phoneNumber": "Phone number",

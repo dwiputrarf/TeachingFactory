@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 import Swiper from '../../components/elements/Swiper';
 import styles from './styles';
+import I18n from '../../i18n';
 
 export default class Component extends React.Component {
   _onPress = () => {
@@ -14,19 +15,19 @@ export default class Component extends React.Component {
   render() {
     return (
       <Swiper onPress={this._onPress}>
-        <View style={[styles.slide, { backgroundColor: '#C04DEE' }]}>
-          <Text style={styles.header}>EAT</Text>
-          <Text style={styles.text}>Good nutrition is an important part of leading a healthy lifestyle</Text>
+        <View style={styles.slide}>
+          <Text style={styles.header}>{I18n.t('onBoarding.title1')}</Text>
+          <Text style={styles.text}>{I18n.t('onBoarding.desc1')}</Text>
         </View>
 
-        <View style={[styles.slide, { backgroundColor: '#4AAFEE' }]}>
-          <Text style={styles.header}>PRAY</Text>
-          <Text style={styles.text}>Prayer is one of the most important things a Christian can do</Text>
+        <View style={styles.slide}>
+          <Text style={styles.header}>{I18n.t('onBoarding.title2')}</Text>
+          <Text style={styles.text}>{I18n.t('onBoarding.desc2')}</Text>
         </View>
 
-        <View style={[styles.slide, { backgroundColor: '#FC515B' }]}>
-          <Text style={styles.header}>LOVE</Text>
-          <Text style={styles.text}>Where there is love there is life</Text>
+        <View style={styles.slide}>
+          <Text style={styles.header}>{I18n.t('onBoarding.title3')}</Text>
+          <Text style={styles.text}>{I18n.t('onBoarding.desc3')}</Text>
         </View>
       </Swiper>
     );
