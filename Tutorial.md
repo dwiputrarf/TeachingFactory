@@ -132,8 +132,9 @@ export default class Component extends React.Component {
   }
 }
 ```
-4. Pisahkan **styling** ke file *./app/screen/SplashScreen/style.js* dan kemudian gunakan dalam **component**. Dan **String** ke *./app/I18n/locales/en.json* dan *./app/I18n/locales/id.json*
-** ./SplashScreen/component.js **
+4. Pisahkan **styling** ke file *./app/screen/SplashScreen/style.js* dan kemudian gunakan dalam **component**. Dan **String** ke *./app/I18n/locales/en.json* dan *./app/I18n/locales/id.json*.
+
+**./SplashScreen/component.js**
 ```javascript
 import React from 'react';
 import { Text, View, Image } from 'react-native';
@@ -156,7 +157,7 @@ export default class Component extends React.Component {
   }
 }
 ```
-** ./SplashScreen/styles.js **
+**./SplashScreen/styles.js**
 ```javascript
 import { StyleSheet } from 'react-native';
 import { COLOR_WHITE, COLOR_BLACK } from '../../styles';
@@ -178,7 +179,7 @@ const styles = StyleSheet.create({
 
 export default styles;
 ```
-** Tambahkan code berikut pada *.app/I18n/locales/en.json* dan *.app/I18n/locales/id.json*
+**Tambahkan code berikut pada *.app/I18n/locales/en.json* dan *.app/I18n/locales/id.json* **
 ```javascript
   "appName": "GO GREEN",
   "appVersion": "v.1.1",
@@ -212,3 +213,5 @@ Component.propTypes = {
 };
 ```
 3. Ganti `// Timer Selesai (Lakukan Sesuatu)` dengan `this.props.navigation.navigate('Home');` untuk melakukan navigasi ke route Home.
+
+![Sample SplashScreen](https://media.giphy.com/media/XbsQzoRFyqVJUsatUj/giphy.gif)
