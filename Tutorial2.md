@@ -332,3 +332,9 @@ const styles = StyleSheet.create({
 export default styles;
 ```
 ![Sample OnBoarding](https://media.giphy.com/media/cMcIxkOn68RFL4pK9k/giphy.gif)
+
+# Customized/Revamp OnBoarding UI
+
+![Customized OnBoarding](https://media.giphy.com/media/VI8erJk8mLtdxRUxoz/giphy.gif)
+
+1. Custom Reusable Component Button
