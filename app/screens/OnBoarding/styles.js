@@ -1,19 +1,25 @@
 import { StyleSheet } from 'react-native';
-import { COLOR_BASE_PRIMARY_MAIN } from '../../styles';
+import { COLOR_WHITE } from '../../styles';
 
 const styles = StyleSheet.create({
-  button: {
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    backgroundColor: COLOR_BASE_PRIMARY_MAIN
-  },
-  container: {
+  slide: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
   },
+  header: {
+    color: COLOR_WHITE,
+    fontFamily: 'Avenir',
+    fontSize: 30,
+    fontWeight: 'bold',
+    marginVertical: 15
+  },
   text: {
-    fontSize: 20
+    color: COLOR_WHITE,
+    fontFamily: 'Avenir',
+    fontSize: 18,
+    marginHorizontal: 40,
+    textAlign: 'center'
   }
 });
 
