@@ -11,7 +11,7 @@ import IMAGES from '../../configs/images';
 
 export default class Component extends React.Component {
   _onPress = () => {
-    this.props.navigation.navigate('App');
+    this.props.navigation.navigate('UserAuth');
   };
 
   render() {

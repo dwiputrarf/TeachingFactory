@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { View, TextInput, Text } from 'react-native';
 import PropTypes from 'prop-types';
@@ -43,10 +44,10 @@ export default class Component extends React.Component {
     }
     return (
       <View style={styles.mainContainer}>
-        <View style={styles.containerLabel}>
+        {/* <View style={styles.containerLabel}>
           <Text style={styles.textStyle(type, editable)}>{label}</Text>
           <Text style={styles.textOptional(type, editable)}>{optional}</Text>
-        </View>
+        </View> */}
         <View style={containerTextInputStyle}>
           <TextInput
             style={styles.textInputStyle(type)}

@@ -9,9 +9,11 @@
   "error": {
     "timeOutConnection": "Connection timeout. Please try again later."
   },
+  "forgetPass": "Forget Password",
   "gallery": "Gallery",
   "getStarted": "Get Started",
   "loading": "Loading ...",
+  "login": "Login",
   "next": "Next",
   "onBoarding": {
     "title1": "Study",
@@ -28,9 +30,11 @@
   "rememberMe": "Remember me",
   "selectDate": "Select Date : ",
   "selectFrom": "Select From : ",
+  "signUp": "Sign Up",
   "submit": "Submit",
   "tryAgain": "Try again",
   "update": "Update",
   "updateBody": "Please update the application to the new version, \n to get the new contents",
-  "updateTitle": "Update"
+  "updateTitle": "Update",
+  "username": "Username"
 }

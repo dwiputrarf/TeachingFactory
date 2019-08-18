@@ -9,9 +9,11 @@
   "error" : {
     "timeOutConnection": "Koneksi timeout. silahkan coba beberapa saat lagi."
   },
+  "forgetPass": "Lupa Sandi",
   "gallery": "Galeri",
   "getStarted": "Get Started",
   "loading": "Loading ...",
+  "login": "Masuk",
   "next": "Next",
   "onBoarding": {
     "title1": "Study",
@@ -28,9 +30,11 @@
   "rememberMe": "Remember me",
   "selectDate": "Pilih Tanggal : ",
   "selectFrom": "Pilih Dari : ",
+  "signUp": "Daftar",
   "submit": "Submit",
   "tryAgain": "Coba Lagi",
   "update": "Perbarui",
   "updateBody": "Harap perbarui aplikasi ke versi baru, \n untuk mendapatkan konten-konten terbaru",
-  "updateTitle": "Perbarui"  
+  "updateTitle": "Perbarui",
+  "username": "Username"
 }

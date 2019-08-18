@@ -6,6 +6,7 @@ import History from '../screens/History';
 import Account from '../screens/Account';
 import OnBoarding from '../screens/OnBoarding';
 import SplashScreen from '../screens/SplashScreen';
+import SignIn from '../screens/SignIn';
 
 export const SplashScreenStack = StackNavigator(
   {
@@ -23,6 +24,31 @@ export const SplashScreenStack = StackNavigator(
     }
   }
 );
+
+export const OnBoardingStack = StackNavigator(
+  {
+    OnBoarding: {
+      screen: OnBoarding,
+      navigationOptions: {
+        tabBarVisible: false
+      }
+    }
+  },
+  { headerMode: 'none', navigationOptions: { tabBarVisible: false } }
+);
+
+export const UserAuthStack = StackNavigator(
+  {
+    SignIn: {
+      screen: SignIn,
+      navigationOptions: {
+        tabBarVisible: false
+      }
+    }
+  },
+  { headerMode: 'none', navigationOptions: { tabBarVisible: false } }
+);
+
 
 export const HomeStack = StackNavigator(
   {
@@ -78,18 +104,6 @@ export const AccountStack = StackNavigator(
       screen: Account,
       navigationOptions: {
         tabBarVisible: true
-      }
-    }
-  },
-  { headerMode: 'none', navigationOptions: { tabBarVisible: false } }
-);
-
-export const OnBoardingStack = StackNavigator(
-  {
-    OnBoarding: {
-      screen: OnBoarding,
-      navigationOptions: {
-        tabBarVisible: false
       }
     }
   },
