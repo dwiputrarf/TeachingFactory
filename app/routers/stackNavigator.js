@@ -7,6 +7,7 @@ import Account from '../screens/Account';
 import OnBoarding from '../screens/OnBoarding';
 import SplashScreen from '../screens/SplashScreen';
 import SignIn from '../screens/SignIn';
+import SignUp from '../screens/SignUp';
 
 export const SplashScreenStack = StackNavigator(
   {
@@ -41,6 +42,12 @@ export const UserAuthStack = StackNavigator(
   {
     SignIn: {
       screen: SignIn,
+      navigationOptions: {
+        tabBarVisible: false
+      }
+    },
+    SignUp: {
+      screen: SignUp,
       navigationOptions: {
         tabBarVisible: false
       }

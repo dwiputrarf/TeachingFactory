@@ -7,7 +7,8 @@
   "country": "negara",
   "email": "Email",
   "error" : {
-    "timeOutConnection": "Koneksi timeout. silahkan coba beberapa saat lagi."
+    "timeOutConnection": "Koneksi Timeout. Silahkan coba beberapa saat lagi.",
+    "networkError": "Koneksi Gagal. Silahkan coba beberapa saat lagi."
   },
   "forgetPass": "Lupa Sandi",
   "gallery": "Galeri",

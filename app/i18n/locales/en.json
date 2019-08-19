@@ -7,7 +7,8 @@
   "country": "country",
   "email": "Email",
   "error": {
-    "timeOutConnection": "Connection timeout. Please try again later."
+    "timeOutConnection": "Connection Timeout. Please try again later.",
+    "networkError": "Network Error. Please try again later."
   },
   "forgetPass": "Forget Password",
   "gallery": "Gallery",
