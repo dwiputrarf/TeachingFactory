@@ -23,38 +23,43 @@ export default class Component extends React.Component {
     };
   }
 
-  _signIn = async () => {
+  _SignUp = async () => {
     const { email, password } = this.state;
     const params = { email, password };
     try {
-      const result = await ENDPOINT.login(params);
+      const result = await ENDPOINT.signUp(params);
       const myJSON = JSON.stringify(params);
       alert(myJSON);
       console.log({ result });
       if (result.token.length > 0) {
-        this.props.navigation.navigate('Home');
+        this.props.navigation.navigate('Login');
       } else {
-        ToastAndroid.show('Failed to login', ToastAndroid.SHORT);
+        ToastAndroid.show('Failed to Register', ToastAndroid.SHORT);
       }
     } catch (error) {
       ToastAndroid.show('error.networkError', ToastAndroid.SHORT);
     }
   };
 
-  _signUp = () => {
+  _SignIn = () => {
     console.log('SIGN UP');
     const { navigation } = this.props;
-    navigation.navigate('SignUp');
+    navigation.navigate('SignIn');
   };
 
   render() {
     const { email, password } = this.state;
     return (
       <MainScreen style={styles.mainContainer}>
-        <View style={styles.logoContainer}>
-          <Image source={IMAGES.appLogo} resizeMode="contain" style={styles.logo} />
+        <View style={styles.row}>
+          <View style={styles.logoContainer}>
+            <Image source={IMAGES.appLogo} resizeMode="contain" style={styles.logo} />
+          </View>
+          <View style={styles.appDetails}>
+            <Text style={styles.appTitle}>{I18n.t('appName')}</Text>
+            <Text style={styles.forgetPass}>{I18n.t('appDesc')}</Text>
+          </View>
         </View>
-        <Text style={styles.appTitle}>{I18n.t('appName')}</Text>
         <Input
           placeholder={I18n.t('email')}
           editable
@@ -67,15 +72,11 @@ export default class Component extends React.Component {
           value={password}
           onChangeText={password => this.setState({ password })}
         />
-        <Text style={styles.forgetPass}>{I18n.t('forgetPass')}</Text>
-        <Button type="raised-ripple" title={I18n.t('login')} onPress={this._signIn} />
         <View style={styles.margin} />
-        <Button
-          customText={styles.outlinedText}
-          customContainer={styles.outlined}
-          title={I18n.t('signUp')}
-          onPress={this._signUp}
-        />
+        <Button type="raised-ripple" title={I18n.t('signUp')} onPress={this._SignUp} />
+        <Text onPress={this._SignIn} style={styles.haveAccount}>
+          {I18n.t('haveAccount')}
+        </Text>
       </MainScreen>
     );
   }

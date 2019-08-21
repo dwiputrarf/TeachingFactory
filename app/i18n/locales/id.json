@@ -1,6 +1,7 @@
 {
   "appName": "GO GREEN",
   "appVersion": "v.1.1",
+  "appDesc": "Green is Life, Life is Green",
   "camera": "Kamera",
   "cancel": "Kembali",
   "checkConnection": "Tidak ada koneksi. \nCek Koneksi internet anda.",
@@ -13,6 +14,7 @@
   "forgetPass": "Lupa Sandi",
   "gallery": "Galeri",
   "getStarted": "Get Started",
+  "haveAccount": "Sudah punya akun? Sign In",
   "loading": "Loading ...",
   "login": "Masuk",
   "next": "Next",

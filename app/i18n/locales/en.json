@@ -1,6 +1,7 @@
 {
   "appName": "GO GREEN",
   "appVersion": "v.1.1",
+  "appDesc": "Green is Life, Life is Green",
   "camera": "Camera",
   "cancel": "Cancel",
   "checkConnection": "No internet connection found. \nCheck your connection.",
@@ -13,6 +14,7 @@
   "forgetPass": "Forget Password",
   "gallery": "Gallery",
   "getStarted": "Get Started",
+  "haveAccount": "Already have account? Sign In",
   "loading": "Loading ...",
   "login": "Login",
   "next": "Next",
