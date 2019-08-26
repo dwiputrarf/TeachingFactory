@@ -1,19 +1,21 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Image, TouchableOpacity, ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
+import Carousel, { Pagination } from 'react-native-snap-carousel';
+
 import MainScreen from '../../components/layouts/MainScreen';
-import Header from '../../components/elements/Header';
 import styles from './styles';
 import { ENDPOINT } from '../../configs';
-// import { measureNetworkBandwitdh } from '../../utils/checkBandwidth';
 import errors from '../../utils/errors';
 import I18n from '../../i18n';
+import METRICS from '../../constants/metrics';
 
 export default class Component extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoading: false
+      isLoading: false,
+      imageActiveSlide: 0
     };
   }
 
@@ -41,19 +43,37 @@ export default class Component extends React.Component {
     }
   };
 
+  _renderAutoSlider = ({ item }) => (
+    <View style={styles.slide}>
+      <TouchableOpacity activeOpacity={1} style={styles.slideInnerContainer}>
+        <Image style={styles.image} source={{ uri: item.avatar }} resizeMode="cover" />
+      </TouchableOpacity>
+    </View>
+  );
+
   render() {
     const { listUsers } = this.props;
+    const { imageActiveSlide } = this.state;
     return (
-      <MainScreen isLoading={this.state.isLoading}>
-        <Header title="Home" setting back />
-        <View style={styles.container}>
-          {listUsers.map(item => (
-            <View key={item.id}>
-              <Text>{`${item.first_name} ${item.last_name}`}</Text>
-              <Image source={{ uri: item.avatar }} style={{ width: 100, height: 150 }} />
-            </View>
-          ))}
-        </View>
+      <MainScreen isLoading={this.state.isLoading} style={styles.mainContainer}>
+        <ScrollView>
+          <Carousel
+            data={listUsers}
+            renderItem={this._renderAutoSlider}
+            sliderWidth={METRICS.screenWidth}
+            itemWidth={METRICS.screenWidth}
+            onSnapToItem={i => this.setState({ imageActiveSlide: i })}
+            autoplay
+            loop
+          />
+          <Pagination
+            dotsLength={listUsers.length}
+            activeDotIndex={imageActiveSlide}
+            dotStyle={styles.dotStyle}
+            inactiveDotStyle={styles.activeDot}
+            inactiveDotScale={1}
+          />
+        </ScrollView>
       </MainScreen>
     );
   }

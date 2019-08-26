@@ -10,6 +10,6 @@ export default SwitchNavigator(
     UserAuth: UserAuthStack
   },
   {
-    initialRouteName: 'UserAuth'
+    initialRouteName: 'App'
   }
 );
