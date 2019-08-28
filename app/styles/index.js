@@ -21,6 +21,7 @@ export const COLOR_FONT_PRIMARY_LIGHT = '#bdbdbd';
 
 export const COLOR_FONT_SECONDARY_DARK = '#00E676';
 export const COLOR_FONT_SECONDARY_LIGHT = '#00E676';
+export const COLOR_FONT_LINK = '#0000FF';
 
 export const COLOR_EVENT_SUCCESS = '#58cd85';
 export const COLOR_EVENT_ERROR = red.red_50;

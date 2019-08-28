@@ -1,14 +1,54 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-key */
 import React from 'react';
-import { View, Image, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Image, TouchableOpacity, ScrollView, Text, FlatList } from 'react-native';
 import PropTypes from 'prop-types';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 
 import MainScreen from '../../components/layouts/MainScreen';
 import styles from './styles';
-import { ENDPOINT } from '../../configs';
+import { ENDPOINT, IMAGES } from '../../configs';
 import errors from '../../utils/errors';
 import I18n from '../../i18n';
 import METRICS from '../../constants/metrics';
+import { ARRAYS } from '../../constants';
+
+const android = ARRAYS.ANDROID;
+
+const menu = [
+  {
+    id: 1,
+    name: 'Buttons',
+    icon: IMAGES.appLogo
+  },
+  {
+    id: 2,
+    name: 'Input',
+    icon: IMAGES.appLogo
+  },
+  {
+    id: 3,
+    name: 'Modal',
+    icon: IMAGES.appLogo
+  },
+  {
+    id: 4,
+    name: 'List',
+    icon: IMAGES.appLogo
+  },
+  {
+    id: 5,
+    name: 'Picker',
+    icon: IMAGES.appLogo
+  },
+  {
+    id: 6,
+    name: 'Switch',
+    icon: IMAGES.appLogo
+  }
+];
 
 export default class Component extends React.Component {
   constructor(props) {
@@ -22,13 +62,6 @@ export default class Component extends React.Component {
   async componentDidMount() {
     const { actions } = this.props;
     await actions.fetchGetListUser('1');
-    // measureNetworkBandwitdh((success, data, error) => {
-    //   if (success) {
-    //     Alert.alert(data);
-    //   } else if (error) {
-    //     Alert.alert(data);
-    //   }
-    // });
   }
 
   _loadData = async () => {
@@ -50,6 +83,50 @@ export default class Component extends React.Component {
       </TouchableOpacity>
     </View>
   );
+
+  _keyExtractor = (item, index) => item.id;
+
+  _onPressItem = id => {
+    console.log(id);
+  };
+
+  _renderMenu = ({ item }) => (
+    <TouchableOpacity onPress={this._screen(item.id)} style={styles.cardMenu}>
+      <View style={styles.logoContainer}>
+        <Image source={item.icon} resizeMode="cover" style={styles.logo} />
+      </View>
+      <Text>{item.name}</Text>
+    </TouchableOpacity>
+  );
+
+  _screen = id => {
+    let screen = '';
+    switch (id) {
+      case '1':
+        screen = 'Schedule';
+        break;
+      case '2':
+        screen = 'Venue';
+        break;
+      case '3':
+        screen = 'MyQR';
+        break;
+      case '4':
+        screen = 'Gallery';
+        break;
+      case '5':
+        screen = 'AboutEvent';
+        break;
+      case '6':
+        screen = 'Partners';
+        break;
+      default:
+        screen = 'Button';
+        break;
+    }
+    console.log(screen);
+    // this.props.navigation.navigate(screen);
+  };
 
   render() {
     const { listUsers } = this.props;
@@ -73,6 +150,34 @@ export default class Component extends React.Component {
             inactiveDotStyle={styles.activeDot}
             inactiveDotScale={1}
           />
+          <FlatList
+            keyExtractor={this._keyExtractor}
+            renderItem={this._renderMenu}
+            data={menu}
+            numColumns={3}
+          />
+          <View style={styles.titleContainer}>
+            <Text style={styles.title}>List Product</Text>
+            <Text onPress={() => console.log('see More Pressed')} style={styles.seeMore}>
+              See More
+            </Text>
+          </View>
+          <ScrollView showsHorizontalScrollIndicator={false} horizontal>
+            {android.map(item => (
+              <TouchableOpacity style={styles.cardProduct}>
+                <View style={styles.logoContainer}>
+                  <Image source={item.icon} resizeMode="cover" style={styles.logo} />
+                </View>
+                <Text ellipsizeMode="tail" numberOfLines={1}>
+                  {item.name}
+                </Text>
+                <Text ellipsizeMode="tail" numberOfLines={1}>
+                  {item.api}
+                </Text>
+              </TouchableOpacity>
+            ))}
+          </ScrollView>
+          <View style={{ height: METRICS.doubleBaseMargin }} />
         </ScrollView>
       </MainScreen>
     );
@@ -81,6 +186,7 @@ export default class Component extends React.Component {
 
 Component.propTypes = {
   listUsers: PropTypes.array
+  // navigation: PropTypes.object.isRequired
 };
 
 Component.defaultProps = {
