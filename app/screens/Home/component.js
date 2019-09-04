@@ -20,7 +20,7 @@ const android = ARRAYS.ANDROID;
 const menu = [
   {
     id: 1,
-    name: 'Buttons',
+    name: 'Button',
     icon: IMAGES.appLogo
   },
   {
@@ -103,22 +103,22 @@ export default class Component extends React.Component {
     let screen = '';
     switch (id) {
       case '1':
-        screen = 'Schedule';
+        screen = 'Button';
         break;
       case '2':
-        screen = 'Venue';
+        screen = 'Input';
         break;
       case '3':
-        screen = 'MyQR';
+        screen = 'Modal';
         break;
       case '4':
-        screen = 'Gallery';
+        screen = 'List';
         break;
       case '5':
-        screen = 'AboutEvent';
+        screen = 'Picker';
         break;
       case '6':
-        screen = 'Partners';
+        screen = 'Switch';
         break;
       default:
         screen = 'Button';
