@@ -1,4 +1,4 @@
-# UserAuth (create UI SignIn)
+# UserAuth (UI SignIn)
 
 ![Sample SignIn](https://i.ibb.co/4gHHcRj/SignIn.png)
 
@@ -195,8 +195,7 @@ import { get, post } from './networking';
 export const endpoint = {
   getListUser: async page => get(`/users?page=${page}`),
   getUserById: async id => get(`/users/${id}`),
-  login: async params => post('/login', params),
-  signUp: async params => post('/register', params)
+  login: async params => post('/login', params)
 };
 
 export default { endpoint };
@@ -251,6 +250,7 @@ Perhatikan bahwa setiap pemanggilan API menggunakan fungsi **async** dan **await
 # UserAuth (SignUp Screen)
 
 1. Seperti yang terdapat pada tutorial di atas Copy-Paste Screen SignIn dan sesuaikan sehingga seperti gambar di bawah ini.
-2. *hint : gunakan layouting menggunakan props flexDirection untuk mengubah orientasi rendering pada UI*
+2. hint : gunakan layouting menggunakan props flexDirection untuk mengubah orientasi rendering pada UI
+3. Fungsikan button SignUp dengan menggunakan fetching API dengan EndPoint yang terdapat pada https://reqres.in/ .
 
 ![Sample SignUp](https://i.ibb.co/vvLB5sG/SignUp.png)
