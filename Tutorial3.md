@@ -1,6 +1,4 @@
-# UserAuth Screen
-
-# create UI SignIn
+# UserAuth (create UI SignIn)
 
 ![Sample SignIn](https://i.ibb.co/4gHHcRj/SignIn.png)
 
@@ -139,7 +137,7 @@ https://medium.com/@vinod8812/building-reusable-component-in-react-native-542413
 
 **Reuseable Component -** adalah sebuah komponen yang dapat digunakan dimanapun dalam sebuah project dan dapat dimodifikasi dengan menggunakan props nya. 
 
-Reusable component memiliki lifecycle hampir sama seperti screen pada umumnya yang bisa di lihat pada https://reactjs.org/docs/react-component.html
+Reusable component memiliki lifecycle hampir sama seperti screen pada umumnya yang bisa di lihat pada https://reactjs.org/docs/react-component.html dan file yang dibutuhkan juga sama yaitu : component.js, index.js dan styles.js.
 
 ```javascript
 // import section
@@ -173,6 +171,13 @@ import styles from './styles';
     title: 'Default Title'
   };
 ``` 
+Cara pemanggilan sebuah reusable component sangatlah mudah :
+1. import komponen yang sudah dibuat misalkan **Button** yang terdapat pada *./app/components/element/button* `import Button from '../../components/elements/Button';`.
+2. Panggil komponen tersebut pada render dan isikan props sesuai komponen yang berkaitan, komponen yang memiliki tipe data dengan tambahan `isRequired` akan menjadi `props` yang mandatory atau wajib untuk diisikan. ` <Button title="Sign In" />`
+3. Untuk selanjutnya Screen yang memanggil komponen dapat kita sebut sebagai `parent` dan komponennya sebagai `child`.
+4. Komponen memiliki lingkup penggunaan yang sangat luas dan bisa kalian explore sendiri.
+
+https://callstack.com/blog/reusable-react-native-components/
 
 # Fetching API Login
 Open API untuk latihan : https://reqres.in/
@@ -220,7 +225,32 @@ Perhatikan perbedaan method **post** dan **get** serta cara penulisan `endpoint`
   ```
 Perhatikan bahwa setiap pemanggilan API menggunakan fungsi **async** dan **await** untuk menunggu response api.
 
-# SignUp
+# MISC
+1. Buka androidManifest.xml dan tambahkan code berikut ini dalam tag MainActivity
+```javascript
+        android:screenOrientation="portrait"
+        android:configChanges="keyboard|keyboardHidden|screenSize"
+        android:windowSoftInputMode="adjustNothing"
+```
+2. Sehingga menjadi seperti berikut ini
+```javascript
+      <activity
+        android:name=".MainActivity"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:configChanges="keyboard|keyboardHidden|screenSize"
+        android:windowSoftInputMode="adjustNothing">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+      </activity>
+```
+3. Cari tahu masing-masing kegunaan line baris yang ditambahkan tadi.
+
+# UserAuth (SignUp Screen)
+
+1. Seperti yang terdapat pada tutorial di atas Copy-Paste Screen SignIn dan sesuaikan sehingga seperti gambar di bawah ini.
+2. *hint : gunakan layouting menggunakan props flexDirection untuk mengubah orientasi rendering pada UI*
 
 ![Sample SignUp](https://i.ibb.co/vvLB5sG/SignUp.png)
-
