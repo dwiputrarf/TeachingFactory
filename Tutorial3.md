@@ -135,8 +135,44 @@ export default SwitchNavigator(
 4. Ganti navigation pada **OnBoarding** dari **app** ke **UserAuth** `this.props.navigation.navigate('UserAuth');`.
 
 # Basic Understanding of Reusable Component
+https://medium.com/@vinod8812/building-reusable-component-in-react-native-54241314bef3
 
+**Reuseable Component -** adalah sebuah komponen yang dapat digunakan dimanapun dalam sebuah project dan dapat dimodifikasi dengan menggunakan props nya. 
 
+Reusable component memiliki lifecycle hampir sama seperti screen pada umumnya yang bisa di lihat pada https://reactjs.org/docs/react-component.html
+
+```javascript
+// import section
+import React from 'react';
+import { TouchableOpacity, TouchableNativeFeedback, Text, View, Platform } from 'react-native';
+import PropTypes from 'prop-types';
+import styles from './styles';
+
+  export default class Component extends React.Component {
+    render() {
+    let { title } = this.props;
+      return (
+        <View style={[styles.containerStyle, customContainer]}>
+          <Text style={[styles.textStyle, customText]}>{title}</Text>
+        </View>
+      );
+    }
+  }
+  
+  // mendefinisikan tipe data dari props 
+  Component.propTypes = {
+    title: PropTypes.string.isRequired,
+    customContainer: PropTypes.object,
+    customText: PropTypes.object
+  };
+  
+  // mendefinisikan default value dari props jika tidak diisi pada parent
+  Component.defaultProps = {
+    customContainer: {},
+    customText: {},
+    title: 'Default Title'
+  };
+``` 
 
 # Fetching API Login
 Open API untuk latihan : https://reqres.in/
@@ -145,6 +181,7 @@ Open API untuk latihan : https://reqres.in/
 
 1. Ganti **baseUrl API** jika dibutuhkan yang berada di *./app/configs/networking.js*, pastikan sudah mengarah ke url https://reqres.in/api. skip ke langkah 2 jika sudah sesuai. 
 2. Buatlah method untuk memanggil api pada file *./app/configs/services.js* sebagai `ENDPOINT`
+
 **services.js**
 ```javaScript
 import { get, post } from './networking';
