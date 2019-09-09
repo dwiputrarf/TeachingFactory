@@ -1,4 +1,4 @@
-# UserAuth (UI SignIn)
+# UserAuth (SignIn Screen)
 
 ![Sample SignIn](https://i.ibb.co/4gHHcRj/SignIn.png)
 
