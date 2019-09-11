@@ -91,7 +91,7 @@ export default class Component extends React.Component {
   };
 
   _renderMenu = ({ item }) => (
-    <TouchableOpacity onPress={this._screen(item.id)} style={styles.cardMenu}>
+    <TouchableOpacity onPress={() => this._screen(item.id)} style={styles.cardMenu}>
       <View style={styles.logoContainer}>
         <Image source={item.icon} resizeMode="cover" style={styles.logo} />
       </View>
@@ -125,7 +125,7 @@ export default class Component extends React.Component {
         break;
     }
     console.log(screen);
-    // this.props.navigation.navigate(screen);
+    this.props.navigation.navigate(screen);
   };
 
   render() {
@@ -185,8 +185,8 @@ export default class Component extends React.Component {
 }
 
 Component.propTypes = {
-  listUsers: PropTypes.array
-  // navigation: PropTypes.object.isRequired
+  listUsers: PropTypes.array,
+  navigation: PropTypes.object.isRequired
 };
 
 Component.defaultProps = {

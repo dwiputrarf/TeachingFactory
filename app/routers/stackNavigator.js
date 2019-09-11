@@ -8,6 +8,12 @@ import OnBoarding from '../screens/OnBoarding';
 import SplashScreen from '../screens/SplashScreen';
 import SignIn from '../screens/SignIn';
 import SignUp from '../screens/SignUp';
+import Button from '../screens/Button';
+import Modal from '../screens/Modal';
+import List from '../screens/List';
+import Input from '../screens/Input';
+import Picker from '../screens/Picker';
+import Switch from '../screens/Switch';
 
 export const SplashScreenStack = StackNavigator(
   {
@@ -64,7 +70,43 @@ export const HomeStack = StackNavigator(
       navigationOptions: {
         tabBarVisible: true
       }
-    }
+    },
+    Picker: {
+      screen: Picker,
+      navigationOptions: {
+        tabBarVisible: false
+      }
+    },
+    Modal: {
+      screen: Modal,
+      navigationOptions: {
+        tabBarVisible: false
+      }
+    },
+    List: {
+      screen: List,
+      navigationOptions: {
+        tabBarVisible: false
+      }
+    },
+    Switch: {
+      screen: Switch,
+      navigationOptions: {
+        tabBarVisible: false
+      }
+    },
+    Button: {
+      screen: Button,
+      navigationOptions: {
+        tabBarVisible: false
+      }
+    },
+    Input: {
+      screen: Input,
+      navigationOptions: {
+        tabBarVisible: false
+      }
+    },
   },
   { headerMode: 'none', navigationOptions: { tabBarVisible: false } }
 );

@@ -1,5 +1,5 @@
 import { SwitchNavigator } from 'react-navigation';
-import { OnBoardingStack, SplashScreenStack, UserAuthStack } from './stackNavigator';
+import { OnBoardingStack, SplashScreenStack, UserAuthStack, HomeStack } from './stackNavigator';
 import { Drawer } from './drawerNavigator';
 
 export default SwitchNavigator(
@@ -7,9 +7,10 @@ export default SwitchNavigator(
     SplashScreen: SplashScreenStack,
     OnBoarding: OnBoardingStack,
     App: Drawer,
-    UserAuth: UserAuthStack
+    UserAuth: UserAuthStack,
+    Home: HomeStack
   },
   {
-    initialRouteName: 'App'
+    initialRouteName: 'Home'
   }
 );
