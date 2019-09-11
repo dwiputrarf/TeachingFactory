@@ -15,6 +15,14 @@
   "gallery": "Galeri",
   "getStarted": "Get Started",
   "haveAccount": "Sudah punya akun? Sign In",
+  "header":{
+    "button": "Button",
+    "input": "Input",
+    "list": "List",
+    "modal": "Modal",
+    "picker": "Picker",
+    "switch": "Switch"
+  },
   "loading": "Loading ...",
   "login": "Masuk",
   "next": "Next",

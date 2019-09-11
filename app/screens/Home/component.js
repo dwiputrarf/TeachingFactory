@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
@@ -102,29 +103,25 @@ export default class Component extends React.Component {
   _screen = id => {
     let screen = '';
     switch (id) {
-      case '1':
+      case 1:
         screen = 'Button';
         break;
-      case '2':
+      case 2:
         screen = 'Input';
         break;
-      case '3':
+      case 3:
         screen = 'Modal';
         break;
-      case '4':
+      case 4:
         screen = 'List';
         break;
-      case '5':
+      case 5:
         screen = 'Picker';
         break;
-      case '6':
+      case 6:
         screen = 'Switch';
         break;
-      default:
-        screen = 'Button';
-        break;
     }
-    console.log(screen);
     this.props.navigation.navigate(screen);
   };
 

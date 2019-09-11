@@ -15,6 +15,14 @@
   "gallery": "Gallery",
   "getStarted": "Get Started",
   "haveAccount": "Already have account? Sign In",
+  "header":{
+    "button": "Button",
+    "input": "Input",
+    "list": "List",
+    "modal": "Modal",
+    "picker": "Picker",
+    "switch": "Switch"
+  },
   "loading": "Loading ...",
   "login": "Login",
   "next": "Next",
