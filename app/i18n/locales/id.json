@@ -9,7 +9,9 @@
   "email": "Email",
   "error" : {
     "timeOutConnection": "Koneksi Timeout. Silahkan coba beberapa saat lagi.",
-    "networkError": "Koneksi Gagal. Silahkan coba beberapa saat lagi."
+    "networkError": "Koneksi Gagal. Silahkan coba beberapa saat lagi.",
+    "noData": "Hasil tidak ditemukan",
+    "noDataDesc": "Kami tidak menemukan dat yang anda cari"
   },
   "forgetPass": "Lupa Sandi",
   "gallery": "Galeri",

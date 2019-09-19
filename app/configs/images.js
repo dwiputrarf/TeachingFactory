@@ -7,7 +7,8 @@ const images = {
   androidLogo: require('../../assets/images/android.png'),
   icoBack: require('../../assets/images/ic-back.png'),
   icoSearch: require('../../assets/images/ic-search.png'),
-  icoCloseGrey: require('../../assets/images/ic-close-grey.png')
+  icoCloseGrey: require('../../assets/images/ic-close-grey.png'),
+  noDataSearch: require('../../assets/images/noFoundSearch.png')
   // checkBoxOn: require('../../assets/images/checkbox_on.png'),
   // checkBoxOff: require('../../assets/images/checkbox_off.png'),
   // close: require('../../assets/images/close.png'),

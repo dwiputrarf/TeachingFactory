@@ -9,7 +9,9 @@
   "email": "Email",
   "error": {
     "timeOutConnection": "Connection Timeout. Please try again later.",
-    "networkError": "Network Error. Please try again later."
+    "networkError": "Network Error. Please try again later.",
+    "noData": "No Result Found",
+    "noDataDesc": "We can’t find any item matching your search"
   },
   "forgetPass": "Forget Password",
   "gallery": "Gallery",
