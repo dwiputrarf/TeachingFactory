@@ -4,8 +4,10 @@ const images = {
   onBoarding1: require('../../assets/images/on_boarding_1.jpg'),
   onBoarding2: require('../../assets/images/on_boarding_2.jpg'),
   onBoarding3: require('../../assets/images/on_boarding_3.jpg'),
-  androidLogo: require('../../assets/images/android.png')
-  // back: require('../../assets/images/back.png'),
+  androidLogo: require('../../assets/images/android.png'),
+  icoBack: require('../../assets/images/ic-back.png'),
+  icoSearch: require('../../assets/images/ic-search.png'),
+  icoCloseGrey: require('../../assets/images/ic-close-grey.png')
   // checkBoxOn: require('../../assets/images/checkbox_on.png'),
   // checkBoxOff: require('../../assets/images/checkbox_off.png'),
   // close: require('../../assets/images/close.png'),

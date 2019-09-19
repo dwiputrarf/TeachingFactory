@@ -21,7 +21,8 @@
     "list": "List",
     "modal": "Modal",
     "picker": "Picker",
-    "switch": "Switch"
+    "switch": "Switch",
+    "news": "News Feed"
   },
   "loading": "Loading ...",
   "login": "Login",
@@ -37,6 +38,9 @@
   "oops": "Oops!",
   "password": "Password",
   "phoneNumber": "Phone number",
+  "placeholder": {
+    "news": "Search news..."
+  },
   "pleaseTryAgain": "Please try again",
   "rememberMe": "Remember me",
   "selectDate": "Select Date : ",

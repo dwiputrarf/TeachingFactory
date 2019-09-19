@@ -146,7 +146,7 @@ export const FONT_BODY1_PRIMARY = {
 
 export const FONT_BODY1_SECONDARY = {
   fontFamily: FONT_SECONDARY_REGULAR,
-  fontSize: FONT_SIZE_BODY1
+  FfontSize: FONT_SIZE_BODY1
 };
 
 export const FONT_BODY2_PRIMARY = {

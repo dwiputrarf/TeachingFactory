@@ -21,7 +21,8 @@
     "list": "List",
     "modal": "Modal",
     "picker": "Picker",
-    "switch": "Switch"
+    "switch": "Switch",
+    "news": "Berita Terkini"
   },
   "loading": "Loading ...",
   "login": "Masuk",
@@ -37,6 +38,9 @@
   "oops": "Oops!",
   "password": "Password",
   "phoneNumber": "Nomor telepon",
+  "placeholder": {
+    "news": "Search news..."
+  },
   "pleaseTryAgain": "Silahkan coba lagi",
   "rememberMe": "Remember me",
   "selectDate": "Pilih Tanggal : ",
