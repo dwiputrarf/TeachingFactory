@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unused-state */
 /* eslint-disable no-console */
 import React from 'react';
-import { View, FlatList, Text, Image, RefreshControl } from 'react-native';
+import { View, FlatList, Text, Image, RefreshControl, Linking } from 'react-native';
 import PropTypes from 'prop-types';
 
 import MainScreen from '../../components/layouts/MainScreen';
@@ -107,7 +107,10 @@ export default class Component extends React.Component {
       <View style={styles.information}>
         <Text style={styles.title}> {item.title} </Text>
         <Text> {item.description} </Text>
-        <Text style={{ color: COLOR_FONT_LINK }}> {item.url} </Text>
+        <Text onPress={() => this._onPress(item.url)} style={{ color: COLOR_FONT_LINK }}>
+          {' '}
+          {item.url}{' '}
+        </Text>
       </View>
     </View>
   );
@@ -131,7 +134,13 @@ export default class Component extends React.Component {
     );
   };
 
-  _onPress = () => {};
+  _onPress = url => {
+    Linking.canOpenURL(url).then(supported => {
+      if (supported) {
+        Linking.openURL(url);
+      }
+    });
+  };
 
   render() {
     const { data, refreshing } = this.state;
