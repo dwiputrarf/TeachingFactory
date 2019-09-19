@@ -19,6 +19,7 @@
     "react": "16.6.0-alpha.8af6728",
     "react-native": "0.54.2",
     "react-native-i18n": "^2.0.12",
+    "react-native-masonry": "^0.5.0-alpha.5",
     "react-native-snap-carousel": "^3.8.0",
     "react-native-svg": "^7.0.3",
     "react-navigation": "^1.5.8",

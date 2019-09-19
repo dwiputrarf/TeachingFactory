@@ -53,6 +53,7 @@ const metrics = {
   marginHorizontal: scale(10),
   marginVertical: scale(10),
   section: scale(25),
+  halfMargin: scale(5),
   baseMargin: scale(10),
   doubleBaseMargin: scale(20),
   smallMargin: scale(5),

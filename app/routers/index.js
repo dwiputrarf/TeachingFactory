@@ -11,6 +11,6 @@ export default SwitchNavigator(
     Home: HomeStack
   },
   {
-    initialRouteName: 'Home'
+    initialRouteName: 'App'
   }
 );

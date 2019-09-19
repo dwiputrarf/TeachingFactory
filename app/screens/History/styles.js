@@ -1,13 +1,14 @@
+/* eslint-disable react-native/no-color-literals */
 import { StyleSheet } from 'react-native';
-import { COLOR_WHITE } from '../../styles';
+import METRICS from '../../constants/metrics';
+import { COLOR_EVENT_INACTIVE } from '../../styles';
 
 const styles = StyleSheet.create({
-  container: {
+  mainContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: COLOR_WHITE
-  }
+    backgroundColor: COLOR_EVENT_INACTIVE
+  },
+  masonryList: { flex: 1, flexGrow: 10, padding: METRICS.halfMargin }
 });
 
 export default styles;
