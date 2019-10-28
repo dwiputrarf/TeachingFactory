@@ -54,9 +54,3 @@ buck-out/
 
 # Bundle artifact
 *.jsbundle
-
-# eslint
-.eslintcache
-
-coverage/
-ios/Pods
