@@ -26,7 +26,7 @@
     "env:prod": "./prepare-env.sh .env.prod .env && ./setup-google-services.sh ./google-service/android/google-services.prod.json ./android/app/google-services.json && ./setup-google-services.sh ./google-service/ios/GoogleService-Info.prod.plist ./ios/GoogleService-Info.plist && npm run start:reset"
   },
   "dependencies": {
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.19",
     "moment": "^2.24.0",
     "react": "16.8.3",
     "react-native": "^0.59.2",
